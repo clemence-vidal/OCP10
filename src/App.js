@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 import "./App.scss";
 import Page from "./pages/Home";
-import { DataProvider } from "./contexts/DataContext";
+import { DataProvider,  } from "./contexts/DataContext";
 
 function App() {
   return (
@@ -9,6 +9,6 @@ function App() {
       <Page />
     </DataProvider>
   );
-}
+};
 
 export default App;
