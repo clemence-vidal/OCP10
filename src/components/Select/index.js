@@ -16,11 +16,10 @@ const Select = ({
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
+    onChange(newValue); //
     setValue(newValue);
-    setCollapsed(true);
-    onChange(newValue);
+    setCollapsed(newValue);
   };
-  // la valeur de l'option selectionnée ne va pas ê prise
   return (
     <div className={`SelectContainer ${type}`} data-testid="select-testid">
       {label && <div className="label">{label}</div>}

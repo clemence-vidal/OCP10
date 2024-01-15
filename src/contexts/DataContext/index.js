@@ -19,14 +19,13 @@ export const api = {
 export const DataProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
-  const [last, setLast] = useState(null);
+  const [last, setLast] = useState(null); //
   const getData = useCallback(async () => {
     try {
-      const newData = await api.loadData();
-      setData(newData);
-      const sortedEvents = newData?.events?.sort((a, b) => new Date(b.date) - new Date(a.date));
-      setLast(sortedEvents ? sortedEvents[0] : undefined);
-      setData(newData);
+      const newData = await api.loadData(); //
+      setData(newData);                     //
+      const sortedEvents = newData?.events?.sort((a, b) => new Date(b.date) - new Date(a.date)); //
+      setLast(sortedEvents ? sortedEvents[0] : undefined); //
       } catch (err) {
       setError(err);
     }
@@ -42,7 +41,7 @@ return (
     value={{
       data,
       error,
-      last,
+      last, //
     }}
   >
     {children}
