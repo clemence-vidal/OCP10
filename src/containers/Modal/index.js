@@ -15,7 +15,7 @@ const Modal = ({ opened, Content, children }) => {
             <button
               type="button"
               data-testid="close-modal"
-              onClick={() => setIsOpened(false)}
+              onClick={() => setIsOpened()} //
             >
               <Icon name="close" />
             </button>
